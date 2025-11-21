@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Moustache Game Prototype.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Moustache Game Prototype" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="040F70E4-E4BA-451C-AB0A-099E6EF6F23C" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="450,175" size="100,100">(text-color:&quot;grey&quot;)[&quot;Well here it is son! &#39;&#39;My //life&#39;s// work&#39;&#39; is now entrusted &#39;&#39;solely to you.&#39;&#39; 
+<tw-storydata name="Moustache Game Prototype" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="040F70E4-E4BA-451C-AB0A-099E6EF6F23C" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="325,175" size="100,100">(text-color:&quot;grey&quot;)[&quot;Well here it is son! &#39;&#39;My //life&#39;s// work&#39;&#39; is now entrusted &#39;&#39;solely to you.&#39;&#39; 
 Millenia of history&#39;s best groomed men and women walked through those doors and sat on these very seats.&quot;
 
 //&#39;&#39;He pats the single leather chair in the small shop and looks around, reminiscing on the time he had spent here.&#39;&#39;//]
@@ -25,46 +25,52 @@ Millenia of history&#39;s best groomed men and women walked through those doors 
     But more importantly, you find the front pages all have instructions and notes of your Father&#39;s tools.&#39;&#39; 
 
 (text-color: &quot;grey&quot;)
-[[Next|Intro 2]] ]]</tw-passagedata><tw-passagedata pid="2" name="Stalin" tags="" position="825,300" size="100,100">//&#39;&#39;He sits down in the leather chair, his eyes not meeting the mirror &#39;&#39;//
+[[Next|Intro 2]] ]]</tw-passagedata><tw-passagedata pid="2" name="Stalin" tags="" position="700,300" size="100,100">//&#39;&#39;He sits down in the leather chair, his eyes not meeting the mirror &#39;&#39;//
 
 //You adjust the seat to make up for his shorter stature//
 
 &#39;Um what would you like sir?&#39; You mumble with quivering hands
+“(text-color: &quot;yellow&quot;)[The Germans have invaded and I have a meeting with the allied powers tomorrow, I need to look powerful.”]
 
-(text-color:&quot;yellow&quot;)[&quot;You must have noticed that my facial hair has grown quite lengthy, I need it &#39;&#39;a lot of it removed&#39;&#39; to shape it into the glorious &#39;&#39;moustache&#39;&#39; I once had&quot;]
+(text-color:&quot;yellow&quot;)[&quot;But you must have noticed that my facial hair has grown quite lengthy, I need it &#39;&#39;a lot of it removed&#39;&#39; to shape it into the &#39;&#39;glorious moustache&#39;&#39; I once had&quot;]
 
 [[Use Razor|Tool 1 - 2]]
 
-[[Use Scissors|Tool 1 - 1]]</tw-passagedata><tw-passagedata pid="3" name="Tool 2 - 2" tags="" position="1100,225" size="100,100">(text-color: &quot;yellow&quot;)[&quot;Do you think I have weak facial hair? This is not what I instructed you to do!&quot; He says in an offended tone
+[[Use Scissors|Tool 1 - 1]]</tw-passagedata><tw-passagedata pid="3" name="Tool 2 - 2" tags="" position="1075,300" size="100,100">(text-color: &quot;yellow&quot;)[&quot;Do you think I have weak facial hair? This is not what I instructed you to do!&quot; He says in an offended tone
 
 &quot;Your father should never have given you the responsibility of this place!&quot;]
 
+He sits up angrily and prepares to leave, //giving you a vanguardian stare//, not leaving any money on the table.
 
-[[Next|Bad haircut - Stalin]]</tw-passagedata><tw-passagedata pid="4" name="Tool 2 - 1" tags="" position="1100,75" size="100,100">(text-color: &quot;yellow&quot;)[&quot;This is perfect my boy, this wax keeps my moustache in exquisite form!&quot; He says, admiring his facial hair in the mirror
+(if: $stalinBadHaircut)[[[Next|Bad haircut - Stalin]]]
+(else:)[[[Next|Good haircut - Stalin]]]
+
+(set: $stalinBadHaircut to true)</tw-passagedata><tw-passagedata pid="4" name="Tool 2 - 1" tags="" position="1075,150" size="100,100">(text-color: &quot;yellow&quot;)[&quot;This is perfect my boy, this wax keeps my moustache in exquisite form!&quot; He says, admiring his facial hair in the mirror
 
 &quot;Your father has done wall to pass his knowledge onto you son!&quot;]
 
-[[Next|Good haircut - Stalin]]</tw-passagedata><tw-passagedata pid="5" name="Good haircut - Stalin" tags="" position="1225,75" size="100,100">//&#39;&#39;Seemingly pleased with his new facial hair, he leaves the store happily with his entourage of military men&#39;&#39;//
+(if: $stalinBadHaircut)[[[Next|Bad haircut - Stalin]]]
+(else:)[[[Next|Good haircut - Stalin]]]</tw-passagedata><tw-passagedata pid="5" name="Good haircut - Stalin" tags="" position="1200,150" size="100,100">He chuckles whimsically and leaves money on the table. But, for some reason, it&#39;s less money than your asking price.
 
-&#39;Oh my god, I actually made it through that alive.&#39; You think to yourself
-&#39;That was probably the first and last time someone that crazy is gonna show up&#39;
+//&#39;&#39;Seemingly pleased with his new facial hair, he leaves the shop happily with his entourage of military men&#39;&#39;//
 
-[[Stalin leaves|Stalin leaves happy]]</tw-passagedata><tw-passagedata pid="6" name="Bad haircut - Stalin" tags="" position="1225,225" size="100,100">//&#39;&#39;The door slams as Stalin leaves, unpleased with your shoddy work &#39;&#39;//
+//You breathe a sigh of relief, the wave of stress is over. You even managed to impress yourself with your first happy customer//
 
-&#39;Oh my god, atleast I made it through that alive.&#39; You think to yourself
-&#39;That was probably the first and last time someone that crazy is gonna show up&#39;
+[[Next|Stalin leaves]]</tw-passagedata><tw-passagedata pid="6" name="Bad haircut - Stalin" tags="" position="1200,300" size="100,100">//&#39;&#39;The door slams as Stalin leaves, unpleased with your shoddy work &#39;&#39;//
 
-[[Stalin leaves|Stalin leaves angry]]</tw-passagedata><tw-passagedata pid="7" name="Tool 1 - 1" tags="" position="975,375" size="100,100">(text-color: &quot;yellow&quot;)[&quot;These scissors aren&#39;t the correct tool to remove so much of my facial hair you //Mudak//&quot; He says, gritting his teeth.
+//You breathe a sigh of relief, the wave of stress is over. But maybe you should brush up on your skills or study your Dad&#39;s guide book a bit more.//
 
-&quot;But this isn&#39;t finished just yet, I still need it &#39;&#39;shaped into form&#39;&#39;&quot;]
-
-[[Use Beard Oil|Tool 2 - 2]]
-[[Use Wax|Tool 2 - 3]]</tw-passagedata><tw-passagedata pid="8" name="Tool 1 - 2" tags="" position="975,225" size="100,100">(text-color: &quot;yellow&quot;)[&quot;Ah yes! your father has taught you well! Using scissors to remove this much hair wouldn&#39;t be efficient at all&quot; He says with a grin.
+[[Next|Stalin leaves]]</tw-passagedata><tw-passagedata pid="7" name="Tool 1 - 1" tags="" position="825,425" size="100,100">(text-color: &quot;yellow&quot;)[&quot;These scissors aren&#39;t the correct tool to remove so much of my facial hair you //Mudak//&quot; He says, gritting his teeth.
 
 &quot;But this isn&#39;t finished just yet, I still need it &#39;&#39;shaped into form&#39;&#39;&quot;]
 
 [[Use Beard Oil|Tool 2 - 2]]
-[[Use Wax|Tool 2 - 1]]</tw-passagedata><tw-passagedata pid="9" name="Stalin leaves angry" tags="" position="1350,375" size="100,100"></tw-passagedata><tw-passagedata pid="10" name="Stalin leaves happy" tags="" position="1350,225" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="Intro 2" tags="" position="575,175" size="100,100">&#39;So today is my first day, huh.&#39;
+[[Use Wax|Tool 2 - 3]]
+
+(set: $stalinBadHaircut to true)</tw-passagedata><tw-passagedata pid="8" name="Tool 1 - 2" tags="" position="825,300" size="100,100">(text-color: &quot;yellow&quot;)[&quot;Ah yes! your father has taught you well! Using scissors to remove this much hair wouldn&#39;t be efficient at all&quot; He says with a grin.]
+
+[[Good performance|Good Razor Stalin]]
+[[Bad perforamnce|Bad Razor Stalin]]</tw-passagedata><tw-passagedata pid="9" name="Intro 2" tags="" position="450,175" size="100,100">&#39;So today is my first day, huh.&#39;
 
 (text-color:&quot;grey&quot;)[&quot;The keys are yours son, I pass on my legacy on to you. I know you won&#39;t desecrate this great establishment and the reputation I&#39;ve garnered over these decades.&quot;
 
@@ -78,14 +84,14 @@ Millenia of history&#39;s best groomed men and women walked through those doors 
     
     //&#39;&#39;Before you have the chance to say anything back, he leaves and shuts the door behind him.&#39;&#39;//
     
-[[Next|Intro 3]]]</tw-passagedata><tw-passagedata pid="12" name="Intro 3" tags="" position="700,175" size="100,100">&#39;Don&#39;t stress it he said... easy for him to say. He&#39;s been doing this for years, meeting people from every century, culture, religion.&#39;
+[[Next|Intro 3]]]</tw-passagedata><tw-passagedata pid="10" name="Intro 3" tags="" position="575,175" size="100,100">&#39;Don&#39;t stress it he said... easy for him to say. He&#39;s been doing this for years, meeting people from every century, culture, religion.&#39;
 
 //&#39;&#39;You sit in the leather chair, fidgeting anxiously.&#39;&#39;//
 
 &#39;&#39;&quot;It can&#39;t be //that// bad&quot;&#39;&#39; you think to yourself.
 &#39;&#39;&quot;Dad said he never really gets anyone of importance showing up, so theres nothing to worry about, whats the //worst// that could happen.&quot;&#39;&#39;
 
-[[Next|Stalin Intro]]</tw-passagedata><tw-passagedata pid="13" name="Stalin Intro" tags="" position="575,300" size="100,100">Just as you begin calming yourself down. You hear the door swing open and a large entourage of military men barge in.
+[[Next|Stalin Intro]]</tw-passagedata><tw-passagedata pid="11" name="Stalin Intro" tags="" position="450,300" size="100,100">Just as you begin calming yourself down. You hear the door swing open and a large entourage of military men barge in.
 
 The men were all dressed in rigid, khaki tunics with sleek, brown-handle pistols strapped to their waists. All of them were equally as intimidating as the others.. Except one.
 
@@ -100,7 +106,7 @@ Stood in front of them was a short, stocky man. Yet his mere presence commanded 
 (text-color:&quot;yellow&quot;)[&quot;So you think you I would just trust a scrawny child I&#39;ve never met to bring a blade to my face?&quot;
 
 [[Next|Stalin Intro 2]]]]]]
-    </tw-passagedata><tw-passagedata pid="14" name="Stalin Intro 2" tags="" position="700,300" size="100,100">&#39;Hey man chill out im just gonna-&#39;
+    </tw-passagedata><tw-passagedata pid="12" name="Stalin Intro 2" tags="" position="575,300" size="100,100">&#39;Hey man chill out im just gonna-&#39;
 
 Before you can finish speaking, one of the men behind him stamps his foot and yells
 
@@ -117,16 +123,87 @@ Before you can finish speaking, one of the men behind him stamps his foot and ye
 (link: &quot;Next&quot;)[
 (text-color:&quot;yellow&quot;)[&quot;It&#39;s alright son, just make sure you follow me instructions and you&#39;ll live to spread this fine establishment onto your son aswell.&quot;]
 
-[[Next|Stalin]]]]</tw-passagedata><tw-passagedata pid="15" name="Tool 2 - 3" tags="" position="1100,375" size="100,100">(text-color: &quot;yellow&quot;)[&quot;Atleast you&#39;ve managed to shape it well&quot; He says, wearily inspecting his facial hair in the mirror
+[[Next|Stalin]]]]</tw-passagedata><tw-passagedata pid="13" name="Tool 2 - 3" tags="" position="950,425" size="100,100">(text-color: &quot;yellow&quot;)[&quot;Atleast you&#39;ve managed to shape it well&quot; He says, wearily inspecting his facial hair in the mirror
 
-&quot;This is still unnacceptable! But I will allow you to live to serve me again another time&quot;]
+&quot;But this is still unnacceptable! But I will allow you to live to serve me again another time&quot;]
 
-[[Next|Bad haircut 2 - Stalin]]</tw-passagedata><tw-passagedata pid="16" name="Bad haircut 2 - Stalin" tags="" position="1225,375" size="100,100">//&#39;&#39;The door slams as Stalin leaves, unpleased with your shoddy work &#39;&#39;//
+He sits up angrily and prepares to leave, //giving you a vanguardian stare//, not leaving any money on the table.
 
-&#39;Oh my god, atleast I made it through that alive.&#39; You think to yourself
-&#39;That was probably the first and last time someone that crazy is gonna show up&#39;
+[[Next|Bad haircut - Stalin]]</tw-passagedata><tw-passagedata pid="14" name="Stalin leaves" tags="" position="1325,300" size="100,100">&#39;What the hell are the odds of that&#39; You whisper under your breath.
 
-[[Stalin leaves|Stalin leaves angry]]</tw-passagedata></tw-storydata>
+//Surely that was the worst of it.. right?//
+
+[[Next|Lincoln intro]]</tw-passagedata><tw-passagedata pid="15" name="Lincoln intro" tags="" position="1450,300" size="100,100">Just as you finish cleaning up the shop, sweeping the floor and cleaning your tools. You hear a light ring of a bell from the front door.
+
+You turn around to see an extremely tall, well dressed man. His long face, with deeply lined features, wore a thick, dark beard. But for some reason, he appeared extremely familiar.
+
+But it clicked, the tall top hat on top of his lanky frame, it could only be one person.
+
+//Abraham Lincoln? Its only my first day and these historica figures just keep on showing up. ////&#39;&#39;You sigh in disbelief&#39;&#39;//
+
+(link-reveal: &quot; &#39;Hello Sir Lincoln, sit right here and I&#39;ll be with you soon. &quot;)[
+
+(text-color: &quot;grey&quot;)[&quot;Why thank you son&quot;] He says while taking his top hat and jacket off.
+
+[[Next|Lincoln intro 2]]</tw-passagedata><tw-passagedata pid="16" name="Lincoln intro 2" tags="" position="1575,300" size="100,100">&#39;So what would you like sir?&#39; You ask, just as nervous as you were with the previous customer.
+
+(text-color: &quot;yellow&quot;)[Well son, I have an extremely important presidential speech tomorrow and I want something &#39;&#39;different&#39;&#39;. Something that will make this speech as memorable as possible.]
+
+&#39;Yeah I can make that happen&#39; You say wearily.
+//&#39;That&#39;s all I have to go off of?&#39; &#39;&#39;You sigh&#39;&#39; &#39;Just as I thought this day couldn&#39;t get any worse&#39;//
+
+[[Use Razor|Tool 3 - 2]]
+
+[[Use Scissors|Tool 3 - 1]]</tw-passagedata><tw-passagedata pid="17" name="Tool 3 - 2" tags="" position="1700,175" size="100,100">[[Good performance|Good Razor Lincoln]]
+[[Bad perforamnce|Bad Razor Lincoln]]</tw-passagedata><tw-passagedata pid="18" name="Tool 3 - 1" tags="" position="1700,300" size="100,100">(text-color: &quot;yellow&quot;)[&quot;These scissors wont remove these large chunks of my hair you dimwit&quot; He says, frustrated.
+
+&quot;But I would still like something to help with making my beard appear &#39;&#39;fuller&#39;&#39;.&#39;&#39;&quot;]
+
+[[Use Beard Oil|Tool 4 - 2]]
+[[Use Wax|Tool 4 - 1]]
+
+(set: $lincolnBadHaircut to true)</tw-passagedata><tw-passagedata pid="19" name="Good Razor Stalin" tags="" position="950,150" size="100,100">(text-color: &quot;yellow&quot;)[&quot;Ah yes, I knew as soon as you picked up that razor you would know how to use it.
+
+&quot;But this isn&#39;t finished just yet, I still need it &#39;&#39;shaped into form&#39;&#39;&quot;]
+
+[[Use Beard Oil|Tool 2 - 2]]
+[[Use Wax|Tool 2 - 1]]</tw-passagedata><tw-passagedata pid="20" name="Bad Razor Stalin" tags="" position="950,300" size="100,100">(text-color: &quot;yellow&quot;)[&quot;I was glad your father taught you what tools to use, but clearly he didn&#39;t teach you //how// to use them&quot; He proclaims angrily.
+
+&quot;But this isn&#39;t finished just yet, I still need it &#39;&#39;shaped into form&#39;&#39;&quot;]
+
+[[Use Beard Oil|Tool 2 - 2]]
+[[Use Wax|Tool 2 - 1]]
+
+(set: $stalinBadHaircut to true)</tw-passagedata><tw-passagedata pid="21" name="Tool 4 - 2" tags="" position="1950,300" size="100,100">(text-color: &quot;yellow&quot;)[&quot;Ah this is just perfect son, I&#39;m not quite sure if my beard has ever looked better!&quot; He announces while proudly appreciating your work.
+
+&quot;Could you atleast do something to make this beard of mine appear &#39;&#39;fuller&#39;&#39;.&quot;]
+
+(if: $lincolnBadHaircut)[[[Next|Bad haircut - Lincoln]]]
+(else:)[[[Next|Good haircut - Lincoln]]]</tw-passagedata><tw-passagedata pid="22" name="Good Razor Lincoln" tags="" position="1825,50" size="100,100">(text-color: &quot;yellow&quot;)[&quot;You&#39;ve done a wonderful job son, but just for the cherry on top could you do something to make my beard appear &#39;&#39;fuller&#39;&#39;?]
+
+[[Use Beard Oil|Tool 4 - 2]]
+[[Use Wax|Tool 4 - 1]]
+
+</tw-passagedata><tw-passagedata pid="23" name="Bad Razor Lincoln" tags="" position="1825,175" size="100,100">(text-color: &quot;yellow&quot;)[&quot;I&#39;m glad you know what tools to use boy, but //clearly// you aren&#39;t ready to be taking over this shop.
+
+&quot;Could you atleast do something to make this beard of mine appear &#39;&#39;fuller&#39;&#39;.&quot;]
+
+[[Use Beard Oil|Tool 4 - 2]]
+[[Use Wax|Tool 4 - 1]]
+
+(set: $lincolnBadHaircut to true)</tw-passagedata><tw-passagedata pid="24" name="Tool 4 - 1" tags="" position="1950,175" size="100,100">(text-color: &quot;yellow&quot;)[&quot;What the hell is wrong with you? Now my beard is stiff. How could I possibly show up to my presidential speech looking like this&quot; He snapped.]
+
+[[Next|Bad haircut - Lincoln]]
+
+(set: $lincolnBadHaircut to true)</tw-passagedata><tw-passagedata pid="25" name="Bad haircut - Lincoln" tags="" position="2075,300" size="100,100">(text-color: &quot;yellow&quot;)[&quot;I must say I cannot wait for your father&#39;s return, you should not be running this shop you buffoon.&quot;]
+
+//&#39;&#39;He leaves quickly and angrily, just after hesitantly placing money on the table.&#39;&#39;//
+
+//You keep your head down, ashamed of the shoddy job you had just done. But you still wonder what the odds are of both Stalin and Lincoln coming in on the same day.//</tw-passagedata><tw-passagedata pid="26" name="Good haircut - Lincoln" tags="" position="2075,175" size="100,100">(text-color: &quot;yellow&quot;)[&quot;Son, you&#39;ve done an amazing job I must say&quot; He says cheerfully &quot;This will be a great look for my speech tomorrow&quot;]
+
+//&#39;&#39;He puts his top hat and coat back on with a grin on his face before making his exit.&#39;&#39;//
+
+//You see him out, proud of your work. But you still wonder what the odds are of both Stalin and Lincoln coming in on the same day.//</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
